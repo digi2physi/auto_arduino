@@ -1,0 +1,57 @@
+{
+  "name": "Grove Light Sensor v1.2",
+  "type": "sensor",
+  "category": "light",
+  "difficulty": "beginner",
+  "interface": "analog",
+  "manufacturer": "Seeed Studio",
+  "inputs": [
+    {
+      "name": "LIGHT_PIN",
+      "type": "analog_pin",
+      "required": true,
+      "default": "A0",
+      "description": "Analog pin connected to the sensor"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "rawValue",
+      "type": "int",
+      "range": "0-1023",
+      "description": "Raw analog reading from sensor"
+    },
+    {
+      "name": "percentage",
+      "type": "int",
+      "range": "0-100",
+      "unit": "percent",
+      "description": "Light level as percentage (0=dark, 100=bright)"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "READ_INTERVAL",
+      "type": "int",
+      "default": 500,
+      "unit": "ms",
+      "description": "Time between readings"
+    },
+    {
+      "name": "SHOW_BAR_GRAPH",
+      "type": "bool",
+      "default": true,
+      "description": "Show visual bar graph in Serial Monitor"
+    }
+  ],
+  "dependencies": [],
+  "testedWith": ["Arduino Uno", "Seeeduino"],
+  "wiring": {
+    "grove": "Connect to any Analog port (A0, A1, A2, etc.)",
+    "manual": {
+      "VCC": "5V",
+      "GND": "GND",
+      "SIG": "Analog pin (A0)"
+    }
+  }
+}

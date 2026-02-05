@@ -1,0 +1,66 @@
+{
+  "name": "Grove Temperature & Humidity Sensor",
+  "type": "sensor",
+  "category": "environment",
+  "difficulty": "beginner",
+  "interface": "digital",
+  "manufacturer": "Seeed Studio",
+  "basedOn": "DHT11",
+  "inputs": [
+    {
+      "name": "DHT_PIN",
+      "type": "digital_pin",
+      "required": true,
+      "default": 2,
+      "description": "Digital pin connected to the sensor"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "temperature",
+      "type": "float",
+      "unit": "celsius",
+      "range": "0-50",
+      "accuracy": "±2°C",
+      "description": "Temperature reading"
+    },
+    {
+      "name": "humidity",
+      "type": "float",
+      "unit": "percent",
+      "range": "20-90",
+      "accuracy": "±5%",
+      "description": "Relative humidity"
+    },
+    {
+      "name": "isValid",
+      "type": "bool",
+      "description": "Whether the reading is valid"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "READ_INTERVAL",
+      "type": "int",
+      "default": 2000,
+      "unit": "ms",
+      "description": "Time between readings (minimum 2000ms for DHT11)"
+    },
+    {
+      "name": "SHOW_BAR_GRAPH",
+      "type": "bool",
+      "default": true,
+      "description": "Show visual bar graph in Serial Monitor"
+    }
+  ],
+  "dependencies": ["DHT.h"],
+  "testedWith": ["Arduino Uno", "Seeeduino"],
+  "wiring": {
+    "grove": "Connect to any Digital port (D2, D3, D4, etc.)",
+    "manual": {
+      "VCC": "5V",
+      "GND": "GND",
+      "SIG": "Digital pin"
+    }
+  }
+}
