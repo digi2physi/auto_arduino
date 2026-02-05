@@ -1,0 +1,48 @@
+{
+  "name": "Daryl Servo",
+  "type": "actuator",
+  "category": "motor",
+  "difficulty": "beginner",
+  "interface": "PWM",
+  "inputs": [
+    {
+      "name": "SERVO_PIN",
+      "type": "digital_pin",
+      "required": true,
+      "default": 9,
+      "description": "PWM-capable digital pin connected to servo signal wire"
+    }
+  ],
+  "outputs": [],
+  "parameters": [
+    {
+      "name": "MIN_ANGLE",
+      "type": "int",
+      "default": 0,
+      "unit": "degrees",
+      "description": "Minimum angle limit"
+    },
+    {
+      "name": "MAX_ANGLE",
+      "type": "int",
+      "default": 180,
+      "unit": "degrees",
+      "description": "Maximum angle limit"
+    },
+    {
+      "name": "DEFAULT_SPEED",
+      "type": "int",
+      "default": 15,
+      "unit": "ms",
+      "description": "Delay between degrees for smooth movement"
+    }
+  ],
+  "dependencies": ["Servo.h"],
+  "testedWith": ["Arduino Uno", "Arduino Nano"],
+  "wiring": {
+    "VCC": "5V (or external 5-6V for high-torque servos)",
+    "GND": "GND",
+    "Signal": "PWM pin (D9)"
+  },
+  "notes": "Standard hobby servo. For multiple servos or high-torque servos, use external power supply."
+}

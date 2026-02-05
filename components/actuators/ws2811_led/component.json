@@ -1,0 +1,41 @@
+{
+  "name": "WS2811 Addressable RGB LED (F5-C-WS2811)",
+  "type": "actuator",
+  "category": "LED",
+  "difficulty": "beginner",
+  "interface": "digital",
+  "inputs": [
+    {
+      "name": "LED_PIN",
+      "type": "digital_pin",
+      "required": true,
+      "default": 6,
+      "description": "Digital pin connected to LED data line"
+    },
+    {
+      "name": "NUM_LEDS",
+      "type": "int",
+      "required": true,
+      "default": 1,
+      "description": "Number of LEDs in the chain"
+    }
+  ],
+  "outputs": [],
+  "parameters": [
+    {
+      "name": "BRIGHTNESS",
+      "type": "int",
+      "default": 50,
+      "range": "0-255",
+      "description": "Global brightness level"
+    }
+  ],
+  "dependencies": ["Adafruit_NeoPixel.h"],
+  "testedWith": ["Arduino Uno", "Arduino Nano"],
+  "wiring": {
+    "VCC": "5V",
+    "GND": "GND",
+    "DIN": "Digital pin (D6)"
+  },
+  "notes": "Use a 300-500 ohm resistor on data line for protection. For many LEDs, use external 5V power supply."
+}

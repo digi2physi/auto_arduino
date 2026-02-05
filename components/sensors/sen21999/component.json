@@ -1,0 +1,48 @@
+{
+  "name": "SparkFun PIR Breakout - 1µA (SEN-21999)",
+  "type": "sensor",
+  "category": "motion",
+  "difficulty": "beginner",
+  "interface": "digital",
+  "manufacturer": "SparkFun",
+  "basedOn": "EKMB1107112",
+  "inputs": [
+    {
+      "name": "PIR_PIN",
+      "type": "digital_pin",
+      "required": true,
+      "default": 2,
+      "description": "Digital pin connected to sensor output"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "motionDetected",
+      "type": "bool",
+      "description": "True when motion is detected"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "READ_INTERVAL",
+      "type": "int",
+      "default": 100,
+      "unit": "ms",
+      "description": "Time between readings"
+    },
+    {
+      "name": "SHOW_BAR_GRAPH",
+      "type": "bool",
+      "default": true,
+      "description": "Show visual indicator in Serial Monitor"
+    }
+  ],
+  "dependencies": [],
+  "testedWith": ["Arduino Uno", "Arduino Nano"],
+  "wiring": {
+    "VCC": "3.3V",
+    "GND": "GND",
+    "OUT": "Digital pin (D2)"
+  },
+  "notes": "Ultra-low power (1µA standby). Digital output goes HIGH when motion detected."
+}
