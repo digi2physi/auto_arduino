@@ -14,13 +14,12 @@
  *   - READ_INTERVAL: Time between readings (min 2000ms)
  *   - SHOW_BAR_GRAPH: Toggle visual bar graph
  *
- * WIRING (Grove):
- *   Connect to any Digital port (D2, D3, D4, etc.)
- *
- * WIRING (Manual):
+ * WIRING:
  *   Sensor VCC -> Arduino 5V
  *   Sensor GND -> Arduino GND
- *   Sensor SIG -> Arduino Digital Pin
+ *   Sensor SIG -> Arduino Digital Pin (D2)
+ *
+ *   Grove Shield: Connect to any Digital port
  *
  * LIBRARY:
  *   Install "DHT sensor library" by Adafruit via Library Manager

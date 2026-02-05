@@ -47,11 +47,9 @@
   "dependencies": [],
   "testedWith": ["Arduino Uno", "Seeeduino"],
   "wiring": {
-    "grove": "Connect to any Analog port (A0, A1, A2, etc.)",
-    "manual": {
-      "VCC": "5V",
-      "GND": "GND",
-      "SIG": "Analog pin (A0)"
-    }
+    "VCC": "5V",
+    "GND": "GND",
+    "SIG": "Analog pin (A0)",
+    "grove_alternative": "Any Analog port (A0, A1, A2, etc.)"
   }
 }

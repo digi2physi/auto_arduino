@@ -4,22 +4,25 @@ Laser-based distance sensor using Time of Flight (ToF) technology. Accurate meas
 
 ## Quick Start
 
-1. Connect sensor to **I2C port** (any I2C port on Grove shield)
-2. Install library: Sketch → Include Library → Manage Libraries → Search "Adafruit_VL53L0X"
+1. Wire the sensor to your Arduino (see [Wiring](#wiring) below)
+2. [Install library](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/): Search "Adafruit_VL53L0X" in Library Manager
 3. Upload `template.ino`
-4. Open Serial Monitor (9600 baud)
+4. Open [Serial Monitor](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor/) (9600 baud)
 
 ## Wiring
 
-**Grove Shield:** Plug into any I2C port
+This sensor uses [I2C communication](https://learn.sparkfun.com/tutorials/i2c/all) - a protocol that allows multiple devices to share two wires.
 
-**Manual wiring:**
-| Sensor | Arduino Uno | Arduino Mega |
-|--------|-------------|--------------|
+| Sensor Pin | Arduino Uno | Arduino Mega |
+|------------|-------------|--------------|
 | VCC | 5V (or 3.3V) | 5V (or 3.3V) |
 | GND | GND | GND |
 | SDA | A4 | 20 |
 | SCL | A5 | 21 |
+
+> **Using Grove Shield?** Plug into any I2C port
+
+> **What is I2C?** [Learn about I2C protocol](https://learn.sparkfun.com/tutorials/i2c/all) - it lets you connect multiple sensors using just 2 wires (SDA for data, SCL for clock).
 
 ## Outputs
 
@@ -80,8 +83,15 @@ With `SHOW_BAR_GRAPH false`:
 - Decrease `READ_INTERVAL` for faster updates (minimum ~20ms)
 - Sensor works best with diffuse surfaces; shiny or transparent surfaces may give errors
 
-## Notes
+## Troubleshooting
 
-- I2C address is fixed at 0x29
-- Readings below 30mm may be unreliable
-- "Out of range" error means object is too far or no reflection detected
+- **"VL53L0X not found"**: Check I2C wiring (SDA→A4, SCL→A5 on Uno)
+- **"Out of range"**: Object too far (>2m) or surface not reflecting laser
+- **Inconsistent readings**: Ensure stable mounting, avoid vibration
+
+## Learn More
+
+- [How Time of Flight sensors work](https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout/overview)
+- [I2C communication explained](https://learn.sparkfun.com/tutorials/i2c/all)
+- [Arduino I2C pins reference](https://www.arduino.cc/reference/en/language/functions/communication/wire/)
+- [Sensor datasheet](https://wiki.seeedstudio.com/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/)

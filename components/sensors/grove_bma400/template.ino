@@ -16,14 +16,13 @@
  *   - READ_INTERVAL: Time between readings in ms
  *   - SHOW_BAR_GRAPH: Toggle visual bar graph
  *
- * WIRING (Grove):
- *   Connect to any I2C port
- *
- * WIRING (Manual):
+ * WIRING:
  *   Sensor VCC -> Arduino 3.3V or 5V
  *   Sensor GND -> Arduino GND
- *   Sensor SDA -> Arduino A4 (Uno) or SDA
- *   Sensor SCL -> Arduino A5 (Uno) or SCL
+ *   Sensor SDA -> Arduino A4 (Uno) / pin 20 (Mega)
+ *   Sensor SCL -> Arduino A5 (Uno) / pin 21 (Mega)
+ *
+ *   Grove Shield: Connect to any I2C port
  *
  * LIBRARY:
  *   Install "Grove 3-Axis Digital Accelerometer BMA400" via Library Manager

@@ -15,14 +15,13 @@
  *   - SHOW_BAR_GRAPH: Toggle visual bar graph
  *   - MAX_DISPLAY_RANGE: Bar graph max range in mm
  *
- * WIRING (Grove):
- *   Connect to any I2C port
- *
- * WIRING (Manual):
+ * WIRING:
  *   Sensor VCC -> Arduino 5V (or 3.3V)
  *   Sensor GND -> Arduino GND
- *   Sensor SDA -> Arduino A4 (Uno) or SDA
- *   Sensor SCL -> Arduino A5 (Uno) or SCL
+ *   Sensor SDA -> Arduino A4 (Uno) / pin 20 (Mega)
+ *   Sensor SCL -> Arduino A5 (Uno) / pin 21 (Mega)
+ *
+ *   Grove Shield: Connect to any I2C port
  *
  * LIBRARY:
  *   Install "Adafruit_VL53L0X" via Library Manager

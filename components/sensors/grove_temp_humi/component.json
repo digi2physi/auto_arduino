@@ -56,11 +56,9 @@
   "dependencies": ["DHT.h"],
   "testedWith": ["Arduino Uno", "Seeeduino"],
   "wiring": {
-    "grove": "Connect to any Digital port (D2, D3, D4, etc.)",
-    "manual": {
-      "VCC": "5V",
-      "GND": "GND",
-      "SIG": "Digital pin"
-    }
+    "VCC": "5V",
+    "GND": "GND",
+    "SIG": "Digital pin (D2)",
+    "grove_alternative": "Any Digital port (D2, D3, D4, etc.)"
   }
 }

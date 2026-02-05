@@ -12,13 +12,12 @@
  * PARAMETERS (what you can customize):
  *   - READ_INTERVAL: Time between readings in ms (default: 500)
  *
- * WIRING (Grove):
- *   Connect to any Analog port (A0, A1, A2, etc.)
- *
- * WIRING (Manual):
+ * WIRING:
  *   Sensor VCC -> Arduino 5V
  *   Sensor GND -> Arduino GND
- *   Sensor SIG -> Arduino Analog Pin
+ *   Sensor SIG -> Arduino Analog Pin (A0)
+ *
+ *   Grove Shield: Connect to any Analog port
  */
 
 // ═══════════════════════════════════════════════════════════════
